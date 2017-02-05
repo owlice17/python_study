@@ -1,0 +1,4 @@
+ S = "" 
+ s is a empty string,
+ S[0] is wrong, the result will be -1 #[0] stands the first character, but '' is empty
+ s[0:] is right #[0:] is a order choose character from fisrt one to last one.
