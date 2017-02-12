@@ -1,0 +1,17 @@
+def get_next_target(page)
+  start_link = page.find('<a href')
+  start_quote = page.find('"', start_link)
+  end_quote = page.find('"', strat_quote+1)
+  url = page[start_quoto+1:end_quote]
+  return url end_quoto
+
+def print_all_links(page):
+  while True:
+    url, endpos = get_next_target(page)
+    if url:
+        print url
+        page = page[endpos:]
+     else:
+         break
+         
+print_all_links(get_page("website"))
