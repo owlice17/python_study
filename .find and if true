@@ -1,0 +1,5 @@
+.find()  # find  the positiong of any string  # if it cant find a string the return value will be -1
+if url:                        ### url is true, the <expression> will process, <None> is false, so it will process else
+    <expression>
+else:
+
