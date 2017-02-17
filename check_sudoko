@@ -1,0 +1,50 @@
+# Define a procedure, check_sudoku,
+# that takes as input a square list
+# of lists representing an n x n
+# sudoku puzzle solution and returns the boolean
+# True if the input is a valid
+# sudoku square and returns the boolean False
+# otherwise.
+
+# A valid sudoku square satisfies these
+# two properties:
+
+#   1. Each column of the square contains
+#       each of the whole numbers from 1 to n exactly once.
+
+#   2. Each row of the square contains each
+#       of the whole numbers from 1 to n exactly once.
+
+def check_sudoku(p):
+    j=0
+    while j<len(p):
+        i=1
+        while i<len(p)+1:
+            if i in p[j]:
+                i=i+1
+            else:
+                return False
+        j=j+1
+    
+    q=[[0 for col in range(len(p))] for row in range(len(p))]
+    m=0
+    while m<len(p):
+        n=0
+        while n<len(p):
+            q[m][n] = p[n][m]
+            n = n + 1
+        m = m + 1
+        
+    t = 0
+    while t< len(p):
+        s=1
+        while s<len(p)+1:
+            
+            if s in q[t]:
+                s=s+1
+            
+            else:
+                return False
+        t=t+1
+        
+    return True
