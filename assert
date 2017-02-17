@@ -1,0 +1,1 @@
+assert <expression> #you're telling the program to test that expression, and trigger an error if the condition is false.
