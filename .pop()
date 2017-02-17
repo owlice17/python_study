@@ -1,0 +1,6 @@
+a = [1,2,3]  # a list contain 2 elements at least
+b = a
+x = a.pop() # .pop() mutates list a b removing last element and return its last element
+>>>x=3
+>>>a = [1,2]
+>>>b = [1,2]
