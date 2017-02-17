@@ -17,7 +17,7 @@
 
 def check_sudoku(p):
     j=0
-    while j<len(p):
+    while j<len(p):                     #check each row whether contains the numebr from 1 to n
         i=1
         while i<len(p)+1:
             if i in p[j]:
@@ -26,17 +26,18 @@ def check_sudoku(p):
                 return False
         j=j+1
     
-    q=[[0 for col in range(len(p))] for row in range(len(p))]
+    q=[[0 for col in range(len(p))] for row in range(len(p))]   # define a new second order list 
+                                                  # we can also omit this code lin34 is enough(code shoul be p[m][n]]=p[n][m])
     m=0
     while m<len(p):
         n=0
         while n<len(p):
-            q[m][n] = p[n][m]
+            q[m][n] = p[n][m]                                    # exchange the row and column of list p and give it to list q
             n = n + 1
         m = m + 1
         
     t = 0
-    while t< len(p):
+    while t< len(p):                        #check each coulumn whether contains the number 1 to n
         s=1
         while s<len(p)+1:
             
