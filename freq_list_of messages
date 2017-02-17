@@ -1,0 +1,12 @@
+def freq_analysis(message):    # caculate each 26 letters' frequence in the messages
+    letters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    count=0.0
+    freq_list=[]
+    for i in letters:
+        for j in message:
+            if j == i:
+                count = count+1.0
+            freq = count/(len(message))
+        count = 0.0
+        freq_list.append(freq)
+    return freq_list
