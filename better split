@@ -1,0 +1,24 @@
+def split_string(source,splitlist):
+    output = []
+    aslist = True
+    for char in source:
+        if char in splitlist:
+            aslist = True
+        else:
+            if aslist:
+                output.append(char)
+                aslist = False
+            else:
+                output[-1] += char
+                
+out = split_string("This is a test-of the,string separation-code!"," ,!-")
+print out
+#>>> ['This', 'is', 'a', 'test', 'of', 'the', 'string', 'separation', 'code']
+
+#out = split_string("After  the flood   ...  all the colors came out.", " .")
+#print out
+#>>> ['After', 'the', 'flood', 'all', 'the', 'colors', 'came', 'out']
+
+#out = split_string("First Name,Last Name,Street Address,City,State,Zip Code",",")
+#print out
+#>>>['First Name', 'Last Name', 'Street Address', 'City', 'State', 'Zip Code']
