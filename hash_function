@@ -1,0 +1,3 @@
+ord(<one-letter string>) ---->  number
+chr(<number>)---->  <one_letter string>
+chr(ord(a)) ---->a
